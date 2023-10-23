@@ -1,106 +1,41 @@
-This is e-upTeX, Version 3.141592653-p3.9.1-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2022/dev/Debian) (preloaded format=uplatex 2023.10.19)  19 OCT 2023 16:01
+This is e-upTeX, Version 3.141592653-p3.9.1-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2022/dev/Debian) (preloaded format=uplatex 2023.10.19)  23 OCT 2023 18:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/takumisio/ドキュメント/OSSlab/TeX/takumi-midterm-resume-2023/sample
-(/home/takumisio/ドキュメント/OSSlab/TeX/takumi-midterm-resume-2023/sample.tex
+**/home/takumisio/ドキュメント/OSSlab/TeX/takumi-midterm-2023/takumi-midterm-2023/sample
+(/home/takumisio/ドキュメント/OSSlab/TeX/takumi-midterm-2023/takumi-midterm-2023/sample.tex
 pLaTeX2e <2021-11-15u04> (based on LaTeX2e <2021-11-15> patch level 1)
-L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/bxjscls/bxjsarticle.cls
-Document Class: bxjsarticle 2021/05/18 v2.5a BXJS document classes
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count184
-\calc@Bcount=\count185
-\calc@Adimen=\dimen154
-\calc@Bdimen=\dimen155
-\calc@Askip=\skip47
-\calc@Bskip=\skip48
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count186
-\calc@Cskip=\skip49
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
-) (/usr/share/texlive/texmf-dist/tex/latex/bxjscls/bxjscompat.sty
-Package: bxjscompat 2021/05/18 v2.5a BXJS document classes
-) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifpdf.sty
-Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
- (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
-))
-\stockwidth=\dimen156
-\stockheight=\dimen157
-\jsc@mpt=\dimen158
-\jsc@mmm=\dimen159
-\jsZw=\dimen160
-\jsc@smallskipamount=\skip50
+L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/uplatex/base/ujarticle.cls
+Document Class: ujarticle 2020/09/30 v1.8f-u00 Standard upLaTeX class
+\c@@paper=\count184
+(/usr/share/texlive/texmf-dist/tex/uplatex/base/ujsize11.clo
+File: ujsize11.clo 2020/09/30 v1.8f-u00 Standard upLaTeX file (size option)
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 1004.
+(Font)              scaled to size 10.53629pt on input line 28.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 1004.
-\fullwidth=\dimen161
- (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
- (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+(Font)              scaled to size 10.53629pt on input line 28.
 )
-\Gm@cnth=\count187
-\Gm@cntv=\count188
-\c@Gm@tempcnt=\count189
-\Gm@bindingoffset=\dimen162
-\Gm@wd@mp=\dimen163
-\Gm@odd@mp=\dimen164
-\Gm@even@mp=\dimen165
-\Gm@layoutwidth=\dimen166
-\Gm@layoutheight=\dimen167
-\Gm@layouthoffset=\dimen168
-\Gm@layoutvoffset=\dimen169
-\Gm@dimlist=\toks18
-)
-\c@part=\count190
-\c@section=\count191
-\c@subsection=\count192
-\c@subsubsection=\count193
-\c@paragraph=\count194
-\c@subparagraph=\count195
-\@abstractbox=\box67
-\c@figure=\count196
-\c@table=\count197
-\abovecaptionskip=\skip51
-\belowcaptionskip=\skip52
-\jsc@tocl@width=\dimen170
-\@lnumwidth=\dimen171
-\bibindent=\dimen172
- (/usr/share/texlive/texmf-dist/tex/latex/bxwareki/bxwareki.sty
-Package: bxwareki 2019/06/01 v0.6
-\c@warekiyear=\count198
- (/usr/share/texlive/texmf-dist/tex/latex/bxwareki/bxwareki-cd.def
-File: bxwareki-cd.def 2019/06/01 v0.6
-)) (/usr/share/texlive/texmf-dist/tex/latex/bxjscls/bxjsja-standard.def
-File: bxjsja-standard.def 2021/05/18 v2.5a BXJS document classes
- (/usr/share/texlive/texmf-dist/tex/latex/bxjscls/bxjsja-minimal.def
-File: bxjsja-minimal.def 2021/05/18 v2.5a BXJS document classes
-LaTeX Info: Redefining \textmc on input line 239.
-LaTeX Info: Redefining \textgt on input line 240.
-LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 244.
-LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 244.
-)
-
-LaTeX hooks Warning: Generic hook 'package/after/hyperref' is deprecated.
-(hooks)              Use hook 'package/hyperref/after' instead.
-
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
 \symmincho=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
-(Font)                  JY2/mc/m/n --> JY2/gt/m/n on input line 435.
-LaTeX Info: Redefining \textmc on input line 709.
-LaTeX Info: Redefining \textgt on input line 710.
-)) (./funinfosys.sty
-\suiheioffset=\skip53
-\hyodaioffset=\skip54
+(Font)                  JY2/mc/m/n --> JY2/gt/m/n on input line 616.
+\toclineskip=\dimen154
+\@lnumwidth=\dimen155
+\bibindent=\dimen156
+\heisei=\count193
+) (./funinfosys.sty
+\suiheioffset=\skip49
+\hyodaioffset=\skip50
 
 *** FUN Graduation Study Midterm Report Style ***
 ) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
@@ -108,7 +43,10 @@ LaTeX Info: Redefining \textgt on input line 710.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
  (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
@@ -119,157 +57,110 @@ Package graphics Info: Driver file: dvipdfmx.def on input line 107.
  (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
 File: dvipdfmx.def 2021/03/18 v5.0j Graphics/color driver for dvipdfmx
 ))
-\Gin@req@height=\dimen173
-\Gin@req@width=\dimen174
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2022-01-12 L3 backend support: dvips
-\l__pdf_internal_box=\box68
-\g__pdf_backend_object_int=\count199
-\l__pdf_backend_content_box=\box69
-\l__pdf_backend_model_box=\box70
-\g__pdf_backend_annotation_int=\count266
-\g__pdf_backend_link_int=\count267
-\g__pdf_backend_link_sf_int=\count268
+\l__pdf_internal_box=\box67
+\g__pdf_backend_object_int=\count194
+\l__pdf_backend_content_box=\box68
+\l__pdf_backend_model_box=\box69
+\g__pdf_backend_annotation_int=\count195
+\g__pdf_backend_link_int=\count196
+\g__pdf_backend_link_sf_int=\count197
 ) (./sample.aux)
 \openout1 = `sample.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-
-*geometry* driver: auto-detecting
-*geometry* detected driver: dvips
-*geometry* verbose mode - [ preamble ] result:
-* driver: dvips
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* hratio: 1:1
-* vratio: 1:1
-* modes: includehead includefoot truedimen 
-* h-part:(L,W,R)=(65.48181pt, 414.70561pt, 65.48181pt)
-* v-part:(T,H,B)=(65.59653pt, 640.53917pt, 65.59654pt)
-* \paperwidth=597.49146pt
-* \paperheight=845.04272pt
-* \textwidth=473.36871pt
-* \textheight=708.24622pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-29.59067pt
-* \headheight=14.22636pt
-* \headsep=22.76228pt
-* \topskip=10.0pt
-* \footskip=30.0pt
-* \marginparwidth=18.49426pt
-* \marginparsep=18.49426pt
-* \columnsep=27.46295pt
-* \skip\footins=16.0pt plus 5.0pt minus 2.0pt
-* \hoffset=0.00548pt
-* \voffset=0.00548pt
-* \mag=1095
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 13.31586pt on input line 23.
+(Font)              scaled to size 13.85594pt on input line 24.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 13.31586pt on input line 23.
-Class bxjsarticle Info: Old font command '\bf' is used!!
-(bxjsarticle)           The first occurrence is on input line 23.
+(Font)              scaled to size 13.85594pt on input line 24.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 23.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 13.31586pt on input line 23.
+(Font)              scaled to size 13.85594pt on input line 24.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 23.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 13.31586pt on input line 23.
+(Font)              scaled to size 13.85594pt on input line 24.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 11.09656pt on input line 23.
+(Font)              scaled to size 11.54663pt on input line 24.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 11.09656pt on input line 23.
+(Font)              scaled to size 11.54663pt on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 23.
+(Font)              <12> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 23.
+(Font)              <8> on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 23.
+(Font)              <6> on input line 24.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 7.3977pt on input line 23.
+(Font)              scaled to size 7.69775pt on input line 24.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 5.54828pt on input line 23.
-LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 23.
+(Font)              scaled to size 5.77332pt on input line 24.
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 23.
-LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 23.
+(Font)              scaled to size 10.53629pt on input line 24.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 9.24713pt on input line 23.
+(Font)              scaled to size 10.53629pt on input line 24.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 23.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 23.
-LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 6.47299pt on input line 23.
-LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 4.62357pt on input line 23.
+(Font)              <10.95> on input line 24.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 26.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 11.09656pt on input line 26.
+(Font)              scaled to size 11.54663pt on input line 27.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 26.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 11.09656pt on input line 26.
+(Font)              scaled to size 11.54663pt on input line 27.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 8.32242pt on input line 52.
+(Font)              scaled to size 9.6222pt on input line 46.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 8.32242pt on input line 52.
-[1
+(Font)              scaled to size 9.6222pt on input line 46.
+
+Overfull \vbox (0.73932pt too high) has occurred while \output is active []
+
+ [1
 
 
 ]
-Underfull \hbox (badness 2285) in paragraph at lines 78--79
-[]\OT1/cmr/m/n/10 E.Fggg and H.Ijjj, Elec-tri-cal En-gi-neer-ing,
+Underfull \hbox (badness 2126) in paragraph at lines 75--76
+[]\OT1/cmr/m/n/10.95 A.B.Cdddddd, J. Sys-tems In-for-ma-tion
  []
 
 
-Class bxjsarticle Warning: Some old font commands were used in text:
-(bxjsarticle)                \bf
-(bxjsarticle)              You should note, that since 1994 LaTeX2e provides a
-(bxjsarticle)              new font selection scheme called NFSS2 with several
-(bxjsarticle)              new, combinable font commands. The class provides
-(bxjsarticle)              the old font commands only for compatibility.
+Overfull \vbox (0.73932pt too high) has occurred while \output is active []
 
-[2
+ [2
 
 ] (./sample.aux) ) 
 Here is how much of TeX's memory you used:
- 2602 strings out of 478733
- 43236 string characters out of 5860892
- 357678 words of memory out of 5000000
- 21028 multiletter control sequences out of 15000+600000
- 479222 words of font info for 80 fonts, out of 8000000 for 9000
- 934 hyphenation exceptions out of 8191
- 61i,11n,71p,1062b,300s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 1087 strings out of 478733
+ 18191 string characters out of 5860892
+ 331465 words of memory out of 5000000
+ 19555 multiletter control sequences out of 15000+600000
+ 478444 words of font info for 73 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 55i,11n,62p,1075b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sample.dvi (2 pages, 8340 bytes).
+Output written on sample.dvi (2 pages, 8444 bytes).
