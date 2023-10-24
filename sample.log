@@ -1,10 +1,10 @@
-This is e-upTeX, Version 3.141592653-p3.9.1-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2022/dev/Debian) (preloaded format=uplatex 2023.10.19)  23 OCT 2023 18:00
+This is e-upTeX, Version 3.141592653-p3.9.1-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2022/dev/Debian) (preloaded format=uplatex 2023.10.19)  24 OCT 2023 10:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/takumisio/ドキュメント/OSSlab/TeX/takumi-midterm-2023/takumi-midterm-2023/sample
-(/home/takumisio/ドキュメント/OSSlab/TeX/takumi-midterm-2023/takumi-midterm-2023/sample.tex
+**/home/takumisio/ドキュメント/OSSlab/TeX/takumi-midterm-2023/sample
+(/home/takumisio/ドキュメント/OSSlab/TeX/takumi-midterm-2023/sample.tex
 pLaTeX2e <2021-11-15u04> (based on LaTeX2e <2021-11-15> patch level 1)
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/uplatex/base/ujarticle.cls
 Document Class: ujarticle 2020/09/30 v1.8f-u00 Standard upLaTeX class
@@ -71,96 +71,91 @@ File: l3backend-dvips.def 2022-01-12 L3 backend support: dvips
 ) (./sample.aux)
 \openout1 = `sample.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 24.
+(Font)              scaled to size 13.85594pt on input line 26.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 24.
+(Font)              scaled to size 13.85594pt on input line 26.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 24.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 24.
+(Font)              scaled to size 13.85594pt on input line 26.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 24.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 24.
+(Font)              scaled to size 13.85594pt on input line 26.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 24.
+(Font)              scaled to size 11.54663pt on input line 26.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 24.
+(Font)              scaled to size 11.54663pt on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 24.
+(Font)              <12> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 24.
+(Font)              <8> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 24.
+(Font)              <6> on input line 26.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 24.
+(Font)              scaled to size 7.69775pt on input line 26.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 24.
+(Font)              scaled to size 5.77332pt on input line 26.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 24.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 24.
+(Font)              scaled to size 10.53629pt on input line 26.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 24.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 24.
+(Font)              scaled to size 10.53629pt on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 24.
+(Font)              <10.95> on input line 26.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 27.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 29.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 27.
+(Font)              scaled to size 11.54663pt on input line 29.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 27.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 29.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 27.
+(Font)              scaled to size 11.54663pt on input line 29.
+
+Underfull \hbox (badness 2126) in paragraph at lines 65--66
+[]\OT1/cmr/m/n/10.95 A.B.Cdddddd, J. Sys-tems In-for-ma-tion
+ []
+
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 46.
+(Font)              scaled to size 9.6222pt on input line 71.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 46.
+(Font)              scaled to size 9.6222pt on input line 71.
 
 Overfull \vbox (0.73932pt too high) has occurred while \output is active []
 
  [1
 
 
-]
-Underfull \hbox (badness 2126) in paragraph at lines 75--76
-[]\OT1/cmr/m/n/10.95 A.B.Cdddddd, J. Sys-tems In-for-ma-tion
- []
-
-
-Overfull \vbox (0.73932pt too high) has occurred while \output is active []
-
- [2
-
 ] (./sample.aux) ) 
 Here is how much of TeX's memory you used:
- 1087 strings out of 478733
- 18191 string characters out of 5860892
- 331465 words of memory out of 5000000
- 19555 multiletter control sequences out of 15000+600000
- 478444 words of font info for 73 fonts, out of 8000000 for 9000
+ 1084 strings out of 478733
+ 18098 string characters out of 5860892
+ 330272 words of memory out of 5000000
+ 19553 multiletter control sequences out of 15000+600000
+ 478276 words of font info for 72 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 55i,11n,62p,1075b,273s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,62p,630b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sample.dvi (2 pages, 8444 bytes).
+Output written on sample.dvi (1 page, 4872 bytes).
