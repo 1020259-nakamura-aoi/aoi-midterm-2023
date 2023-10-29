@@ -1,76 +1,78 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.uptex) (TeX Live 2023) (preloaded format=uplatex 2023.10.27)  28 OCT 2023 20:13
+This is e-upTeX, Version 3.141592653-p3.9.1-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2022/dev/Debian) (preloaded format=uplatex 2023.10.26)  29 OCT 2023 19:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Ninge/study/aoi-midterm-2023/sample
-(c:/Users/Ninge/study/aoi-midterm-2023/sample.tex
-pLaTeX2e <2023-02-14u04>+1, based on
-LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-10-23>
-(c:/texlive/2023/texmf-dist/tex/uplatex/base/ujarticle.cls
+**/home/ossfun/study/aoi-midterm-2023/sample
+(/home/ossfun/study/aoi-midterm-2023/sample.tex
+pLaTeX2e <2021-11-15u04> (based on LaTeX2e <2021-11-15> patch level 1)
+L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/uplatex/base/ujarticle.cls
 Document Class: ujarticle 2020/09/30 v1.8f-u00 Standard upLaTeX class
-\c@@paper=\count185
-(c:/texlive/2023/texmf-dist/tex/uplatex/base/ujsize11.clo
+\c@@paper=\count184
+(/usr/share/texlive/texmf-dist/tex/uplatex/base/ujsize11.clo
 File: ujsize11.clo 2020/09/30 v1.8f-u00 Standard upLaTeX file (size option)
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 10.53629pt on input line 28.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 10.53629pt on input line 28.
 )
-\c@part=\count186
-\c@section=\count187
-\c@subsection=\count188
-\c@subsubsection=\count189
-\c@paragraph=\count190
-\c@subparagraph=\count191
-\c@figure=\count192
-\c@table=\count193
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
 \symmincho=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
 (Font)                  JY2/mc/m/n --> JY2/gt/m/n on input line 616.
-\toclineskip=\dimen156
-\@lnumwidth=\dimen157
-\bibindent=\dimen158
-\heisei=\count194
+\toclineskip=\dimen154
+\@lnumwidth=\dimen155
+\bibindent=\dimen156
+\heisei=\count193
 ) (./funinfosys.sty
-\suiheioffset=\skip50
-\hyodaioffset=\skip51
+\suiheioffset=\skip49
+\hyodaioffset=\skip50
 
 *** FUN Graduation Study Midterm Report Style ***
-) (c:/texlive/2023/texmf-dist/tex/latex/url/url.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (c:/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks18
-) (c:/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
- (c:/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-) (c:/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: dvipdfmx.def on input line 107.
- (c:/texlive/2023/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
-File: dvipdfmx.def 2022/09/22 v5.0m Graphics/color driver for dvipdfmx
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2021/03/18 v5.0j Graphics/color driver for dvipdfmx
 ))
-\Gin@req@height=\dimen159
-\Gin@req@width=\dimen160
-) (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
-File: l3backend-dvips.def 2023-10-23 L3 backend support: dvips
-\l__pdf_internal_box=\box68
-\g__pdf_backend_object_int=\count195
-\l__pdf_backend_content_box=\box69
-\l__pdf_backend_model_box=\box70
-\g__pdf_backend_annotation_int=\count196
-\g__pdf_backend_link_int=\count197
-\g__pdf_backend_link_sf_int=\count198
-) (./sample.aux)
+\Gin@req@height=\dimen157
+\Gin@req@width=\dimen158
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2022-01-12 L3 backend support: dvips
+\l__pdf_internal_box=\box67
+\g__pdf_backend_object_int=\count194
+\l__pdf_backend_content_box=\box68
+\l__pdf_backend_model_box=\box69
+\g__pdf_backend_annotation_int=\count195
+\g__pdf_backend_link_int=\count196
+\g__pdf_backend_link_sf_int=\count197
+) (./sample.aux
+
+LaTeX Warning: Label `fig:arch' multiply defined.
+
+)
 \openout1 = `sample.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -136,9 +138,9 @@ LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 11.54663pt on input line 30.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 36.
+(Font)              scaled to size 9.6222pt on input line 40.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 36.
+(Font)              scaled to size 9.6222pt on input line 40.
 
 Overfull \vbox (0.73932pt too high) has occurred while \output is active []
 
@@ -148,73 +150,83 @@ Overfull \vbox (0.73932pt too high) has occurred while \output is active []
 ]
 File: ./src/selenium.png Graphic file (type bmp)
 <./src/selenium.png>
+File: ./src/selenium.png Graphic file (type bmp)
+<./src/selenium.png>
 
-Underfull \hbox (badness 1675) in paragraph at lines 70--71
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \vbox (0.73932pt too high) has occurred while \output is active []
+
+ [2]
+Underfull \hbox (badness 1675) in paragraph at lines 108--109
 []\JY2/mc/m/n/10.95 立教大学\OT1/cmr/m/n/10.95 , "\JY2/mc/m/n/10.95 立教大学シラバス検索シス
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 70--71
+Underfull \hbox (badness 6332) in paragraph at lines 108--109
 \JY2/mc/m/n/10.95 テム\OT1/cmr/m/n/10.95 ", \JY2/mc/m/n/10.95 立教大学\OT1/cmr/m/n/10.95 . [On-line]. Avail-able
  []
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 70--71
+Underfull \hbox (badness 7012) in paragraph at lines 108--109
 \OT1/cmr/m/n/10.95 from: $\OT1/cmtt/m/n/10.95 https : / / www . rep-[]rikkyo . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 \OT1/cmtt/m/n/10.95 class _ rooms ? day = c & hour = 4$\OT1/cmr/m/n/10.95 . Ac-cessed:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 []\JY2/mc/m/n/10.95 東京学芸大学 \OT1/cmr/m/n/10.95 (\JY2/mc/m/n/10.95 非公式\OT1/cmr/m/n/10.95 ), "\JY2/mc/m/n/10.95 東京学芸
  []
 
 
-Underfull \hbox (badness 6910) in paragraph at lines 72--73
+Underfull \hbox (badness 6910) in paragraph at lines 110--111
 \JY2/mc/m/n/10.95 大学教室検索システム\OT1/cmr/m/n/10.95 ", \JY2/mc/m/n/10.95 東京学芸大
  []
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 72--73
+Underfull \hbox (badness 2469) in paragraph at lines 110--111
 \JY2/mc/m/n/10.95 学\OT1/cmr/m/n/10.95 . [On-line]. Avail-able from: $\OT1/cmtt/m/n/10.95 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 \OT1/cmtt/m/n/10.95 / / u-[]gakugei-[]uoa . pages . dev / akitan/$\OT1/cmr/m/n/10.95 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 []\OT1/cmr/m/n/10.95 SeleniumHQ, "Se-le-nium Doc-u-men-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 \OT1/cmr/m/n/10.95 from: $\OT1/cmtt/m/n/10.95 https : / / www . selenium . dev /
  []
 
 
 Overfull \vbox (0.73932pt too high) has occurred while \output is active []
 
- [2] (./sample.aux)
- ***********
-pLaTeX2e <2023-02-14u04>+1, based on
-LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-10-23>
- ***********
+ [3] (./sample.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 1108 strings out of 476504
- 18320 string characters out of 5801756
- 1928881 words of memory out of 5000000
- 23109 multiletter control sequences out of 15000+600000
- 567254 words of font info for 81 fonts, out of 8000000 for 9000
- 36 hyphenation exceptions out of 8191
- 57i,11n,65p,1060b,296s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 1099 strings out of 478733
+ 18240 string characters out of 5860892
+ 328467 words of memory out of 5000000
+ 19561 multiletter control sequences out of 15000+600000
+ 478785 words of font info for 74 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 55i,11n,62p,1058b,292s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sample.dvi (2 pages, 9644 bytes).
+Output written on sample.dvi (3 pages, 18396 bytes).
