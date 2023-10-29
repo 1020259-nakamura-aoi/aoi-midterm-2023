@@ -1,73 +1,75 @@
-This is e-upTeX, Version 3.141592653-p3.9.1-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2022/dev/Debian) (preloaded format=uplatex 2023.10.26)  29 OCT 2023 20:39
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.uptex) (TeX Live 2023) (preloaded format=uplatex 2023.10.27)  29 OCT 2023 23:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/ossfun/study/aoi-midterm-2023/sample
-(/home/ossfun/study/aoi-midterm-2023/sample.tex
-pLaTeX2e <2021-11-15u04> (based on LaTeX2e <2021-11-15> patch level 1)
-L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/uplatex/base/ujarticle.cls
+**c:/Users/Ninge/study/aoi-midterm-2023/sample
+(c:/Users/Ninge/study/aoi-midterm-2023/sample.tex
+pLaTeX2e <2023-02-14u04>+1, based on
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-10-23>
+(c:/texlive/2023/texmf-dist/tex/uplatex/base/ujarticle.cls
 Document Class: ujarticle 2020/09/30 v1.8f-u00 Standard upLaTeX class
-\c@@paper=\count184
-(/usr/share/texlive/texmf-dist/tex/uplatex/base/ujsize11.clo
+\c@@paper=\count185
+(c:/texlive/2023/texmf-dist/tex/uplatex/base/ujsize11.clo
 File: ujsize11.clo 2020/09/30 v1.8f-u00 Standard upLaTeX file (size option)
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 10.53629pt on input line 28.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 10.53629pt on input line 28.
 )
-\c@part=\count185
-\c@section=\count186
-\c@subsection=\count187
-\c@subsubsection=\count188
-\c@paragraph=\count189
-\c@subparagraph=\count190
-\c@figure=\count191
-\c@table=\count192
-\abovecaptionskip=\skip47
-\belowcaptionskip=\skip48
+\c@part=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
 \symmincho=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
 (Font)                  JY2/mc/m/n --> JY2/gt/m/n on input line 616.
-\toclineskip=\dimen154
-\@lnumwidth=\dimen155
-\bibindent=\dimen156
-\heisei=\count193
+\toclineskip=\dimen156
+\@lnumwidth=\dimen157
+\bibindent=\dimen158
+\heisei=\count194
 ) (./funinfosys.sty
-\suiheioffset=\skip49
-\hyodaioffset=\skip50
+\suiheioffset=\skip50
+\hyodaioffset=\skip51
 
 *** FUN Graduation Study Midterm Report Style ***
-) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+) (c:/texlive/2023/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+) (c:/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
- (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+) (c:/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (c:/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: dvipdfmx.def on input line 107.
- (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
-File: dvipdfmx.def 2021/03/18 v5.0j Graphics/color driver for dvipdfmx
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2022/09/22 v5.0m Graphics/color driver for dvipdfmx
 ))
-\Gin@req@height=\dimen157
-\Gin@req@width=\dimen158
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
-File: l3backend-dvips.def 2022-01-12 L3 backend support: dvips
-\l__pdf_internal_box=\box67
-\g__pdf_backend_object_int=\count194
-\l__pdf_backend_content_box=\box68
-\l__pdf_backend_model_box=\box69
-\g__pdf_backend_annotation_int=\count195
-\g__pdf_backend_link_int=\count196
-\g__pdf_backend_link_sf_int=\count197
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
+) (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2023-10-23 L3 backend support: dvips
+\l__pdf_internal_box=\box68
+\g__pdf_backend_object_int=\count195
+\l__pdf_backend_content_box=\box69
+\l__pdf_backend_model_box=\box70
+\g__pdf_backend_annotation_int=\count196
+\g__pdf_backend_link_int=\count197
+\g__pdf_backend_link_sf_int=\count198
 ) (./sample.aux
 
 LaTeX Warning: Label `fig:arch' multiply defined.
@@ -216,17 +218,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--119
 Overfull \vbox (0.73932pt too high) has occurred while \output is active []
 
  [3] (./sample.aux)
+ ***********
+pLaTeX2e <2023-02-14u04>+1, based on
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-10-23>
+ ***********
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1099 strings out of 478733
- 18240 string characters out of 5860892
- 328467 words of memory out of 5000000
- 19561 multiletter control sequences out of 15000+600000
- 478785 words of font info for 74 fonts, out of 8000000 for 9000
- 929 hyphenation exceptions out of 8191
- 55i,11n,62p,1058b,292s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 1113 strings out of 476504
+ 18417 string characters out of 5801756
+ 1929881 words of memory out of 5000000
+ 23113 multiletter control sequences out of 15000+600000
+ 567595 words of font info for 82 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 57i,11n,65p,1060b,296s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on sample.dvi (3 pages, 20176 bytes).
+Output written on sample.dvi (3 pages, 20300 bytes).
