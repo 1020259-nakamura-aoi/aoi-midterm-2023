@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.uptex) (TeX Live 2023) (preloaded format=uplatex 2023.10.27)  30 OCT 2023 02:35
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.uptex) (TeX Live 2023) (preloaded format=uplatex 2023.10.27)  30 OCT 2023 03:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -165,7 +165,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Overfull \vbox (0.73932pt too high) has occurred while \output is active []
 
  [2]
-Overfull \hbox (2.03444pt too wide) in paragraph at lines 97--104
+Overfull \hbox (2.03444pt too wide) in paragraph at lines 98--105
 \OT1/cmr/m/n/10.95 Sphero SPRK+\JY2/mc/m/n/10.95 を用いたロボ ット制御アプリケ ー
  []
 
@@ -173,61 +173,24 @@ Overfull \hbox (2.03444pt too wide) in paragraph at lines 97--104
 Overfull \vbox (0.73932pt too high) has occurred while \output is active []
 
  [3]
-Underfull \hbox (badness 1675) in paragraph at lines 124--125
-[]\JY2/mc/m/n/10.95 立教大学\OT1/cmr/m/n/10.95 , "\JY2/mc/m/n/10.95 立教大学シラバス検索シス
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+[]\OT1/cmr/m/n/10.95 ROSWiki \JY2/mc/m/n/10.95 ： \OT1/cmr/m/n/10.95 ROS/Introduction,
  []
 
 
-Underfull \hbox (badness 6332) in paragraph at lines 124--125
-\JY2/mc/m/n/10.95 テム\OT1/cmr/m/n/10.95 ", \JY2/mc/m/n/10.95 立教大学\OT1/cmr/m/n/10.95 . [On-line]. Avail-able
+Underfull \hbox (badness 1838) in paragraph at lines 122--123
+[]\JY2/mc/m/n/10.95 ロボ ット政策研究会\OT1/cmr/m/n/10.95 : \JY2/mc/m/n/10.95 ロボ ット政策研
  []
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 124--125
-\OT1/cmr/m/n/10.95 from: $\OT1/cmtt/m/n/10.95 https : / / www . rep-[]rikkyo . com /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
-\OT1/cmtt/m/n/10.95 class _ rooms ? day = c & hour = 4$\OT1/cmr/m/n/10.95 . Ac-cessed:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
-[]\JY2/mc/m/n/10.95 東京学芸大学 \OT1/cmr/m/n/10.95 (\JY2/mc/m/n/10.95 非公式\OT1/cmr/m/n/10.95 ), "\JY2/mc/m/n/10.95 東京学芸
- []
-
-
-Underfull \hbox (badness 6910) in paragraph at lines 126--127
-\JY2/mc/m/n/10.95 大学教室検索システム\OT1/cmr/m/n/10.95 ", \JY2/mc/m/n/10.95 東京学芸大
- []
-
-
-Underfull \hbox (badness 2469) in paragraph at lines 126--127
-\JY2/mc/m/n/10.95 学\OT1/cmr/m/n/10.95 . [On-line]. Avail-able from: $\OT1/cmtt/m/n/10.95 https :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
-\OT1/cmtt/m/n/10.95 / / u-[]gakugei-[]uoa . pages . dev / akitan/$\OT1/cmr/m/n/10.95 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
-[]\OT1/cmr/m/n/10.95 SeleniumHQ, "Se-le-nium Doc-u-men-ta-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
-\OT1/cmr/m/n/10.95 from: $\OT1/cmtt/m/n/10.95 https : / / www . selenium . dev /
+Overfull \hbox (256.71191pt too wide) in paragraph at lines 122--123
+\JY2/mc/m/n/10.95 る \OT1/cmr/m/n/10.95 ,https://warp.da.ndl.go.jp/info:ndljp/pid/286890/www.meti.go.jp/press/20060516002/robot-
  []
 
 
 Overfull \vbox (0.73932pt too high) has occurred while \output is active []
 
- [4
-
-] (./sample.aux)
+ [4] (./sample.aux)
  ***********
 pLaTeX2e <2023-02-14u04>+1, based on
 LaTeX2e <2023-06-01> patch level 1
@@ -239,12 +202,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 1113 strings out of 476504
- 18417 string characters out of 5801756
+ 1121 strings out of 476504
+ 18526 string characters out of 5801756
  1929881 words of memory out of 5000000
- 23113 multiletter control sequences out of 15000+600000
- 567595 words of font info for 82 fonts, out of 8000000 for 9000
+ 23122 multiletter control sequences out of 15000+600000
+ 567427 words of font info for 81 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 57i,11n,65p,1060b,296s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,11n,65p,1060b,290s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on sample.dvi (4 pages, 24108 bytes).
+Output written on sample.dvi (4 pages, 25208 bytes).
