@@ -4,6 +4,7 @@
 %         ファイル名："sample.tex"
 %
 \documentclass[11pt]{ujarticle}
+\usepackage{subfig}
 \usepackage{funinfosys}
 \usepackage{url}
 \usepackage[dvipdfmx]{graphicx}
@@ -14,22 +15,23 @@
 }
 \course{Intelligent Systems Course}
 
-\title{クラウド-ロボット間でROSノードが移行できるアーキテクチャ中立なROSランタイムの実現に向けたmROS2-Posixの評価}
+\title{クラウド-ロボット間でROSノードが移行できるアーキテクチャ中立なROSランタイムの実現に向けたmROS2-POSIXの評価}
 \etitle{}
 \eauthor{Aoi Nakamura}
 \abstract{ロボットソフトウェア開発において，ROS（Robot Operating System）の利用が増えている。ROSはクラウドサーバと連携し，分散型ロボットシステムを構築するのに役立つ。しかし，各機能モジュール（ノード）の配置はシステム稼働前に決定する必要があり，予測困難な状況変化で最適なノード配置が変わる可能性がある。
 クラウドとロボット間でのCPUアーキテクチャの違いにより，稼働中のノードの再配置は技術的に難しい。
-\\この研究では，ROSノードの動的配置機構の実現に向けた，組み込みデバイス向けROS 2ランタイム実装であるmROS 2-Posixを評価する。mROS 2-PosixがROS 2と比較してどちらがマイグレーションに適しているかを明らかにし，動的配置機構の実現への影響を実験結果で示す。
+\\この研究では，ROSノードの動的配置機構の実現に向けた，組み込みデバイス向けROS 2ランタイム実装であるmROS 2-POSIXを評価する。mROS 2-POSIXがROS 2と比較してどちらがマイグレーションに適しているかを明らかにし，動的配置機構の実現への影響を実験結果で示す。
 }
 \keywords{ロボティクス,mROS2-POSIX}
 \eabstract{In the field of robotic software development, the utilization of the Robot Operating System (ROS) is on the rise. ROS facilitates collaboration with cloud servers, proving instrumental in the construction of distributed robotic systems. However, the allocation of each functional module (node) necessitates determination prior to system operation, with the potential for optimal node allocation to vary amidst unpredictable environmental changes. The divergence in CPU architecture between cloud and robot interfaces exacerbates the technical challenges associated with node reallocation during operation.
-\\This research endeavors to evaluate mROS 2-Posix, an embedded device-oriented ROS 2 runtime implementation, towards the actualization of a dynamic node allocation mechanism within ROS. Through a comparative analysis with ROS 2, this study elucidates the suitability of mROS 2-Posix for migration, and delineates the impact towards realizing dynamic allocation mechanisms, as evidenced through experimental results.}
+\\This research endeavors to evaluate mROS 2-POSIX, an embedded device-oriented ROS 2 runtime implementation, towards the actualization of a dynamic node allocation mechanism within ROS. Through a comparative analysis with ROS 2, this study elucidates the suitability of mROS 2-POSIX for migration, and delineates the impact towards realizing dynamic allocation mechanisms, as evidenced through experimental results.}
 \ekeywords{Roboethics, mROS2-POSIX}
 \begin{document}
 \maketitle
 %\vspace*{-.5cm}
 
 \section{背景と目的}
+\label{sec:introduction}
 さまざまな産業向けやエンターテイメント関連のロボットシステム，自動車の自動運転技術やIoTシステムの構築においても，これらのソフトウェア開発をサポートするフレームワークとしてRobot Operating System（以下，ROS）の普及が増加している[1]。ROSのプログラミングモデルは，システムの各機能を独立したプログラムモジュール（ノード）として設計することにより，汎用性と再利用性を向上させて，各機能モジュール間のデータ交換を規定することで，効率的かつ柔軟なシステム構築を可能にしている。たとえば，カメラを操作して周囲の環境を撮影するノード，画像からオブジェクトを識別するノード，オブジェクトのデータを基に動作制御を実行するノードを連携させることで，自動運転車の基本機能の一部を容易に実装できる。
 \\　ROSのプログラミングモデルは，ロボット/IoTとクラウドが協力する分散型システムにおいても有効である。ロボットシステムのソフトウェア処理は，「センサー」「知能・制御系」「動力系」の３要素に分けられる[2]。クラウドロボティクスにおいて[3]，主に知能・制御系のノードを高い計算能力を持つクラウドに優先して配置することで，高度な知能・制御処理の実現を促進し，さらに，必要な情報をクラウドに集約・保存することで，複数のロボット間での情報共有と利用を容易にする。
 一方で，現行のROS実装においては，各ノードの配置をシステム起動時に設定する必要があり，先述のクラウドロボティクスのクラウドとロボット間の最適なノード配置を事前に設計する必要がある。しかし，実際の環境で動作するロボットは，ネットワークの状況やバッテリー残量の変動など，システム運用前に予測することが困難な状況変化に対応する必要があり，設定したクラウドとロボット間のノード配置が最適でなくなる可能性がある。このような状況変化に対する対応として，ノードを動的に再配置するマイグレーション機能の実現が求められているが，多くの場合でクラウドとロボット間のCPUアーキテクチャが異なり，実行中のノードをシステム運用中にマイグレーションすることは技術的に困難である。
@@ -37,23 +39,33 @@
 課題として，ROS 2をWasm化したことでオーバーヘッドが増大し，マイグレーション後，ノードの実行時間が大幅に増えてしまう問題が残った．
 柿本ら[5]は，組込みデバイス向けROS 2ランタイム実装であるmROS 2-POSIXを採用し，ROSランタイムのWasm化にともなうオーバヘッド増加に対処した．
 しかし，採用されたmROS 2-POSIXはごく小規模なアプリケーション上でしか評価実験は行われておらず[6]，今後もmROS2 POSIXを採用していく上でアプリケーションの規模を増加させた評価実験は必要不可欠である．
-\\　本研究では，クラウドとロボット間での実行状態を含む稼働中ノードの動的マイグレーションの実現に向けたmROS 2-Posixの評価を行い，mROS 2がROS 2と比べて動的配置機構の実現のソフトウェア基盤としてどの点で優位性があるのか明らかにすることを目指す．
+\\　本研究では，クラウドとロボット間での実行状態を含む稼働中ノードの動的マイグレーションの実現に向けたmROS 2-POSIXの評価を行い，mROS 2がROS 2と比べて動的配置機構の実現のソフトウェア基盤としてどの点で優位性があるのか明らかにすることを目指す．
 %目的
 
 
 
 \section{mROS2-POSIX}
-　そもそも，mROS 2は高瀬らが研究開発を進めているROS 2ノードの軽量実行環境である．
-mROS 2は中規模の組込みデバイス上で実行されるプログラムについて，汎用デバイス上のROS 2ノードと自律的に通信する機能を提供している．
+そもそも，mROS 2は高瀬らが研究開発を進めているROS 2ノードの軽量実行環境である．
+ROS 2ノードと自律的に通信する機能を提供している．
 このソフトウェア基盤によって，分散型のロボットシステムへの組込み技術の導入が促進できる．
 組込みデバイスは計算資源が限定的であるが，これを活用することによってリアルタイム性の向上および消費電力の削減を図ることができる．
 そして，mROS 2がPOSIXに対応したのがmROS 2-POSIXである．
 本章では，組込みデバイス向けの高校率なROS 2通信方式およびメモリ軽量な実行環境を提供しているmROS 2-POSIXについて，ソフトウェア構成を中心に解説する．
 \\　図1（a）は，mROS 2-POSIXのソフトウェア構成を示している．上層から順に，まずmROS 2-POSIXアプリケーション層は，ユーザが実装するROS 2ノードに相当する．
-\begin{figure}[h]
-	\includegraphics[width=0.9\linewidth]{./src/fig1_software_structure.png}
-	\caption{mROS 2とmROS 2-POSIXの内部構成}
-  \label{fig:arch}
+\begin{figure}[t]
+	\centering
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\subfloat[mROS 2-POSIXの内部構成]{
+			\includegraphics[width=0.45\textwidth]{./src/fig1_mros2posix_a.png}\label{fig:subfig_a}
+		}
+		\hfill
+		\subfloat[mROS 2の内部構成]{
+			\includegraphics[width=0.45\textwidth]{./src/fig1_mros2_b.png}\label{fig:subfig_b}
+		}
+	\end{minipage}
+	\caption{mROS 2-POSIXとmROS 2のソフトウェア構成}
+	
 \end{figure}
 mROS 2-POSIX API層および通信ライブラリ層は，ROS 2のtopicに相当するAPIおよび通信機能を提供する階層である．
 本階層は，ROS 2のネイティブなクライアントライブラリであるrclcppと互換性を保つように設計している．
@@ -68,7 +80,7 @@ UDPについては組込み向けのC実装であるlwIPが採用されている
 リアルタイムOSでは，組込みマイコンを実行資源の管理対象として，タスク単位でアプリケーションが実行される．
 POSIXにおいてはタスクに相当する概念はプロセスであり，そこから生成されるスレッドを実行単位として処理が進行している．
 \\　したがって，mROS2-POSIXは図２に示す実行方式を採用している．
-\begin{figure}[h]
+\begin{figure}[t]
 	\includegraphics[width=0.9\linewidth]{./src/fig2_execution_structure.png}
 	\caption{mROS 2-POSIXの実行方式}
   \label{fig:arch}
@@ -82,13 +94,14 @@ lwIPにおけるUDPパケット処理は，POSIXにおけるOS資源の操作に
 
 
 \section{評価方針}
-　mROS 2-POSIXを評価するにあったって，mROS2と同様のアプリケーションをROS 2に実装し，比較評価する．
+mROS 2-POSIXを評価するにあったって，mROS2と同様のアプリケーションをROS 2に実装し，比較評価する．
 mROS 2は，ROS 2のネイティブなクライアントライブラリであるrclcppと互換性を保つように設計されており，ROS2に同様のアプリケーションを実装した場合でも期待される動作をすることができる．
 評価に使用するアプリケーションはSphero SPRK+とWii Fit Boardを用いたロボット制御アプリケーションである．
 アプリケーションは，Wii Fit Boardはユーザの体重移動を検知し，Sphero SPRK+を前後左右に動かすことで，ユーザの体重移動に追従するように動作する．
 図３にアプリケーションの構造を示す．
-\begin{figure}[h]
-	\includegraphics[width=0.9\linewidth]{./src/fig3_application_structure.png}
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.8\linewidth]{./src/fig3_application_structure.png}
 	\caption{実装するアプリケーション}
   \label{fig:arch}
 \end{figure}
@@ -98,11 +111,11 @@ Wii Fit Boardに乗っているユーザの座標をパブリッシュするノ�
 	\item 通信性能の評価
 	\item メモリサイズの評価
 \end{itemize}
-　通信性能の評価については，1回の通信をロボットがLEDを点灯するまでの時間とし，それを100回行い，その平均と最大値と最小値と標準偏差を取ることで性能比較を行う．
+　通信性能の評価については，1回の通信をWii Fit Boardの値をサブスクライブするまでとし，それを100回行い，その平均と最大値と最小値と標準偏差を取ることで性能比較を行う．
 \\メモリサイズの評価については，アプリケーションのバイナリをsizeコマンドで計測しそれぞれtext，data，bssのサイズを比較する．
 
 \section{評価アプリケーションの実装}
-　図3が示すとおり，動作させるアプリケーションは，Wii Fit BoardとSphero SPRK+を用いたロボット制御アプリケーションである．
+図3が示すとおり，動作させるアプリケーションは，Wii Fit BoardとSphero SPRK+を用いたロボット制御アプリケーションである．
 % Wii Fit BoardとSphero SPRK+を用いたロボット制御アプリケーションは，Wii Fit Boardはユーザの体重移動を検知し，Sphero SPRK+を前後左右に動かすことで，ユーザの体重移動に追従するように動作する．
 % 評価アプリケーションの実装として，mROS 2-POSIXとROS 2の両方で同じ機能を持つノードを作成する必要がある．
 ROS 2のアプリケーションは，Wii Fit Boardの値を取得するOSSをROS 2ノード化したものと，Sphero SPRK+を動作させることができるライブラリを提供しているOSSをROS 2ノード化して通信させている．
@@ -115,11 +128,12 @@ mROS 2-POSIXでは，Wii Fit Boardの値をパブリッシュするノードは�
 Sphero SPRK+のノードの移植は，ライブラリがPythonで書かれているため，C++に書き換える必要がある．
 
 \section{結言}
-　本研究では，クラウドとロボット間での実行状態を含む稼働中ノードの動的マイグレーションの実現に向けたmROS 2-Posixの評価を行い，mROS 2がROS 2と比べて動的配置機構の実現のソフトウェア基盤としてどの点で優位性があるのか明らかにすることを目指す．
+本研究では，クラウドとロボット間での実行状態を含む稼働中ノードの動的マイグレーションの実現に向けたmROS 2-Posixの評価を行い，mROS 2がROS 2と比べて動的配置機構の実現のソフトウェア基盤としてどの点で優位性があるのか明らかにすることを目指す．
 \\　現在の進捗状況として，アプリケーションはROS 2で動作するノードの作成が終了しており，残すはmROS 2-POSIX対応を残している．
 
+
 \section{知能システムコースにおける本研究の位置づけ}
-　本研究は，ROS 2の組込み向けデバイスでの実行環境であるmROS 2-POSIXの評価を行うことで，クラウドとロボット間での実行状態を含む稼働中ノードの動的マイグレーションの実現に向けたソフトウェア基盤としての優位性を明らかにすることを目指している．
+本研究は，ROS 2の組込み向けデバイスでの実行環境であるmROS 2-POSIXの評価を行うことで，クラウドとロボット間での実行状態を含む稼働中ノードの動的マイグレーションの実現に向けたソフトウェア基盤としての優位性を明らかにすることを目指している．
 その過程で，mROS 2-POSIXで動作するロボット制御アプリケーションの実装を行い，アプリケーションの動作を評価することで，動的配置機構を実装するソフトウェア基盤として適切であるか評価する．
 そのため，知能システムコースのカリキュラムポリシーに記載のある「実世界への実装に関する具体的な課題に取り組み，その結果の評価を通じて，新しい方法論や学問領域を切り拓く能力を育む」に該当する．
 
