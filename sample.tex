@@ -17,13 +17,14 @@
 \title{Wii Fit BoardとSphero SPRK+による直感的なロボット制御のためのMROS2の活用}
 \etitle{}
 \eauthor{Aoi Nakamura}
-\abstract{ロボットソフトウェア開発において，ROS（Robot Operating System）の利用が増えている。ROSはクラウドサーバと連携し，分散型ロボットシステムを構築するのに役立つ。しかし，各機能モジュール（ノード）の配置はシステム稼働前に決定する必要があり，予測困難な状況変化で最適なノード配置が変わる可能性がある。クラウドとロボット間でのCPUアーキテクチャの違いにより，稼働中のノードの再配置は技術的に難しい。
-\\この研究では，ROSノードの動的配置機構の実現に向けた，組み込みデバイス向けROS 2ランタイム実装であるmROS 2-Posixを評価する。mROS 2-PosixがROS 2と比較してマイグレーションに優位性があるかを明らかにし，動的配置機構の実現への影響を実験結果で示す。
+\abstract{ロボットソフトウェア開発において，ROS（Robot Operating System）の利用が増えている。ROSはクラウドサーバと連携し，分散型ロボットシステムを構築するのに役立つ。しかし，各機能モジュール（ノード）の配置はシステム稼働前に決定する必要があり，予測困難な状況変化で最適なノード配置が変わる可能性がある。
+クラウドとロボット間でのCPUアーキテクチャの違いにより，稼働中のノードの再配置は技術的に難しい。
+\\この研究では，ROSノードの動的配置機構の実現に向けた，組み込みデバイス向けROS 2ランタイム実装であるmROS 2-Posixを評価する。mROS 2-PosixがROS 2と比較してどちらがマイグレーションに適しているかを明らかにし，動的配置機構の実現への影響を実験結果で示す。
 }
-\keywords{ロボティクス,mROS2}
-\eabstract{
-\\}
-\ekeywords{Roboethics, mROS2}
+\keywords{ロボティクス,mROS2-POSIX}
+\eabstract{In the field of robotic software development, the utilization of the Robot Operating System (ROS) is on the rise. ROS facilitates collaboration with cloud servers, proving instrumental in the construction of distributed robotic systems. However, the allocation of each functional module (node) necessitates determination prior to system operation, with the potential for optimal node allocation to vary amidst unpredictable environmental changes. The divergence in CPU architecture between cloud and robot interfaces exacerbates the technical challenges associated with node reallocation during operation.
+\\This research endeavors to evaluate mROS 2-Posix, an embedded device-oriented ROS 2 runtime implementation, towards the actualization of a dynamic node allocation mechanism within ROS. Through a comparative analysis with ROS 2, this study elucidates the suitability of mROS 2-Posix for migration, and delineates the impact towards realizing dynamic allocation mechanisms, as evidenced through experimental results.}
+\ekeywords{Roboethics, mROS2-POSIX}
 \begin{document}
 \maketitle
 %\vspace*{-.5cm}
