@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.uptex) (TeX Live 2023) (preloaded format=uplatex 2023.10.27)  30 OCT 2023 18:17
+This is e-upTeX, Version 3.141592653-p4.1.0-u1.29-230214-2.6 (utf8.uptex) (TeX Live 2023) (preloaded format=uplatex 2023.10.27)  30 OCT 2023 19:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -35,28 +35,243 @@ LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
 \@lnumwidth=\dimen157
 \bibindent=\dimen158
 \heisei=\count194
+) (c:/texlive/2023/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+) (c:/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (c:/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen159
+\captionmargin=\dimen160
+\caption@leftmargin=\dimen161
+\caption@rightmargin=\dimen162
+\caption@width=\dimen163
+\caption@indent=\dimen164
+\caption@parindent=\dimen165
+\caption@hangindent=\dimen166
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionskip \iftdir \sbox \@tempboxa {#1\hskip 1zw#2}\else \sbox \@tempboxa {#1: #2}\fi \ifdim \wd \@tempboxa >\hsize \iftdir #1\hskip 1zw#2\relax \par \else #1: #2\relax \par \fi \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil }\fi \vskip \belowcaptionskip  on input line 1175.
 )
 
-! LaTeX Error: File `subfigure.sty' not found.
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
 
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
+\c@caption@flags=\count195
+\c@continuedfloat=\count196
+)
+\c@KVtest=\count197
+\sf@farskip=\skip50
+\sf@captopadj=\dimen167
+\sf@capskip=\skip51
+\sf@nearskip=\skip52
+\c@subfigure=\count198
+\c@subfigure@save=\count199
+\c@lofdepth=\count266
+\c@subtable=\count267
+\c@subtable@save=\count268
+\c@lotdepth=\count269
+\sf@top=\skip53
+\sf@bottom=\skip54
+) (./funinfosys.sty
+\suiheioffset=\skip55
+\hyodaioffset=\skip56
 
-Enter file name: 
-c:/Users/Ninge/study/aoi-midterm-2023/sample.tex:8: Emergency stop.
-<read *> 
-         
-l.8 \usepackage
-               {funinfosys}^^M
-*** (cannot \read from terminal in nonstop modes)
+*** FUN Graduation Study Midterm Report Style ***
+) (c:/texlive/2023/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (c:/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (c:/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 107.
+ (c:/texlive/2023/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2022/09/22 v5.0m Graphics/color driver for dvipdfmx
+))
+\Gin@req@height=\dimen168
+\Gin@req@width=\dimen169
+) (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2023-10-23 L3 backend support: dvips
+\l__pdf_internal_box=\box68
+\g__pdf_backend_object_int=\count270
+\l__pdf_backend_content_box=\box69
+\l__pdf_backend_model_box=\box70
+\g__pdf_backend_annotation_int=\count271
+\g__pdf_backend_link_int=\count272
+\g__pdf_backend_link_sf_int=\count273
+) (./sample.aux
 
- 
+LaTeX Warning: Label `fig:arch' multiply defined.
+
+)
+\openout1 = `sample.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 13.85594pt on input line 30.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 13.85594pt on input line 30.
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 13.85594pt on input line 30.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <14.4> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 13.85594pt on input line 30.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 30.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 30.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 30.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 5.77332pt on input line 30.
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 30.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 30.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 30.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 30.
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 33.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 33.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 33.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 33.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 44.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 44.
+
+Overfull \vbox (0.73932pt too high) has occurred while \output is active []
+
+ [1
+
+
+]
+File: ./src/fig1_mros2posix_a.png Graphic file (type bmp)
+<./src/fig1_mros2posix_a.png>
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 61.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 61.
+File: ./src/fig1_mros2_b.png Graphic file (type bmp)
+<./src/fig1_mros2_b.png>
+
+Overfull \hbox (13.73148pt too wide) in paragraph at lines 57--67
+ [][]$[]$[] 
+ []
+
+File: ./src/fig2_execution_structure.png Graphic file (type bmp)
+<./src/fig2_execution_structure.png>
+
+Overfull \vbox (0.73932pt too high) has occurred while \output is active []
+
+ [2]
+File: ./src/fig3_application_structure.png Graphic file (type bmp)
+<./src/fig3_application_structure.png>
+
+Overfull \hbox (18.86975pt too wide) in paragraph at lines 97--110
+[]\OT1/cmr/m/n/10.95 mROS 2-POSIX \JY2/mc/m/n/10.95 を評価するにあ った って ， \OT1/cmr/m/n/10.95 mROS2
+ []
+
+
+Overfull \vbox (0.73932pt too high) has occurred while \output is active []
+
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+[]\OT1/cmr/m/n/10.95 ROSWiki \JY2/mc/m/n/10.95 ： \OT1/cmr/m/n/10.95 ROS/Introduction, url-
+ []
+
+
+Underfull \hbox (badness 6157) in paragraph at lines 145--146
+[]\JY2/mc/m/n/10.95 ロボ ット政策研究会\OT1/cmr/m/n/10.95 : \JY2/mc/m/n/10.95 ロボ ット政策
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 145--146
+\JY2/mc/m/n/10.95 研究会 報告書  \OT1/cmr/m/n/10.95 RT \JY2/mc/m/n/10.95 革命が日本を飛
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\JY2/mc/m/n/10.95 躍させる \OT1/cmr/m/n/10.95 ,$\OT1/cmtt/m/n/10.95 https : / / warp . da . ndl .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\OT1/cmtt/m/n/10.95 go . jp / info : ndljp / pid / 286890 / www .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+\OT1/cmtt/m/n/10.95 meti . go . jp / press / 20060516002 /
+ []
+
+
+Overfull \vbox (0.73932pt too high) has occurred while \output is active []
+
+ [4] (./sample.aux)
+ ***********
+pLaTeX2e <2023-02-14u04>+1, based on
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-10-23>
+ ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 290 strings out of 476504
- 3546 string characters out of 5801756
- 1915881 words of memory out of 5000000
- 22344 multiletter control sequences out of 15000+600000
- 561297 words of font info for 57 fonts, out of 8000000 for 9000
+ 2655 strings out of 476504
+ 47970 string characters out of 5801756
+ 1932881 words of memory out of 5000000
+ 24641 multiletter control sequences out of 15000+600000
+ 568181 words of font info for 85 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 35i,0n,38p,183b,44s stack positions out of 10000i,1000n,20000p,200000b,200000s
-No pages of output.
+ 69i,13n,79p,1060b,520s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on sample.dvi (4 pages, 28056 bytes).
