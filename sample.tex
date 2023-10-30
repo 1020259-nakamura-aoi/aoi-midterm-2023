@@ -43,15 +43,15 @@
 
 
 \section{mROS2-POSIX}
-　そもそもmROS 2[7]は高瀬らが研究開発を進めているROS 2ノードの軽量実行環境である．
+　そもそもmROS 2は高瀬らが研究開発を進めているROS 2ノードの軽量実行環境である．
 mROS 2は中規模の組込みデバイス上で実行されるプログラムについて，汎用デバイス上のROS 2ノードと自律的に通信する機能を提供している．
 このソフトウェア基盤によって，分散型のロボットシステムへの組込み技術の導入が促進できる．
 組込みデバイスは計算資源が限定的であるが，これを活用することによってリアルタイム性の向上および消費電力の削減を図ることができる．
-そして，mROS 2がPOSIX[8]に対応したのがmROS 2-POSIXである．
+そして，mROS 2がPOSIXに対応したのがmROS 2-POSIXである．
 本章では，組込みデバイス向けの高校率なROS 2通信方式およびメモリ軽量な実行環境を提供しているmROS 2-POSIXについて，ソフトウェア構成を中心に解説する．
 \\　図1（a）は，mROS 2-POSIXのソフトウェア構成を示している．上層から順に，まずmROS 2-POSIXアプリケーション層は，ユーザが実装するROS 2ノードに相当する．
 \begin{figure}[h]
-	\includegraphics[width=0.9\linewidth]{./src/selenium.png}
+	\includegraphics[width=0.9\linewidth]{./src/fig1_software_structure.png}
 	\caption{mROS 2とmROS 2-POSIXの内部構成}
   \label{fig:arch}
 \end{figure}
@@ -59,7 +59,7 @@ mROS 2-POSIX API層および通信ライブラリ層は，ROS 2のtopicに相当
 本階層は，ROS 2のネイティブなクライアントライブラリであるrclcppと互換性を保つように設計している．
 なお，mROS 2通信ライブラリでは，rclcppのうちpub/sub通信の基本的な機能のみ実装されている．
 利用可能な機能は制限されているものの，組込み技術を導入するROS 2開発者は，汎用OS向けのプログラミングスタイルを踏襲しながらC++によってmROS 2のアプリケーションを実装することができる．
-\\　Real Time Publish-Subscribe（以下，RTPS）プロトコルスタックにはC++実装のembeddedRTPS[10]が採用されている．
+\\　Real Time Publish-Subscribe（以下，RTPS）プロトコルスタックにはC++実装のembeddedRTPS[7]が採用されている．
 メモリ領域の静的確保など組込みデバイスでの稼働を想定して設計されており，RTPSにおけるSimple Participant Discover Protocol（以下，SPDP）およびSimple Endpoint Discover Protocol（以下，SEDP）が実装されているため，通信の自立性が実現できる．
 UDPについては組込み向けのC実装であるlwIPが採用されている．また，これらの階層はCMSIS-POSIX(Cortex Microcontroller System Interface Standard Portable Operating System Interface) APIに依存している．
 通信層のembeddedRTPSおよびlwIPはCMSAIS-POSIXに依存しており，図1（b）に示すmROS 2のCMSIS-RTOSを互換した層になっている．
@@ -69,7 +69,7 @@ UDPについては組込み向けのC実装であるlwIPが採用されている
 POSIXにおいてはタスクに相当する概念はプロセスであり，そこから生成されるスレッドを実行単位として処理が進行している．
 \\　したがって，mROS2-POSIXは図２に示す実行方式を採用している．
 \begin{figure}[h]
-	\includegraphics[width=0.9\linewidth]{./src/selenium.png}
+	\includegraphics[width=0.9\linewidth]{./src/fig2_execution_structure.png}
 	\caption{mROS 2-POSIXの実行方式}
   \label{fig:arch}
 \end{figure}
@@ -84,11 +84,11 @@ lwIPにおけるUDPパケット処理は，POSIXにおけるOS資源の操作に
 \section{評価方針}
 　mROS 2-POSIXを評価するにあったって，mROS2と同様のアプリケーションをROS 2に実装し，比較評価する．
 mROS 2は，ROS 2のネイティブなクライアントライブラリであるrclcppと互換性を保つように設計されており，ROS2に同様のアプリケーションを実装した場合でも期待される動作をすることができる．
-評価に使用するアプリケーションはSphero SPRK+[10]とWii Fit Board[11]を用いたロボット制御アプリケーションである．
+評価に使用するアプリケーションはSphero SPRK+とWii Fit Boardを用いたロボット制御アプリケーションである．
 アプリケーションは，Wii Fit Boardはユーザの体重移動を検知し，Sphero SPRK+を前後左右に動かすことで，ユーザの体重移動に追従するように動作する．
 図３にアプリケーションの構造を示す．
 \begin{figure}[h]
-	\includegraphics[width=0.9\linewidth]{./src/selenium.png}
+	\includegraphics[width=0.9\linewidth]{./src/fig3_application_structure.png}
 	\caption{実装するアプリケーション}
   \label{fig:arch}
 \end{figure}
@@ -103,8 +103,8 @@ Wii Fit Boardに乗っているユーザの座標をパブリッシュするノ�
 
 \section{評価アプリケーションの実装}
 　図3が示すとおり，動作させるアプリケーションは，Wii Fit BoardとSphero SPRK+を用いたロボット制御アプリケーションである．
-Wii Fit BoardとSphero SPRK+を用いたロボット制御アプリケーションは，Wii Fit Boardはユーザの体重移動を検知し，Sphero SPRK+を前後左右に動かすことで，ユーザの体重移動に追従するように動作する．
-評価アプリケーションの実装として，mROS 2-POSIXとROS 2の両方で同じ機能を持つノードを作成する必要がある．
+% Wii Fit BoardとSphero SPRK+を用いたロボット制御アプリケーションは，Wii Fit Boardはユーザの体重移動を検知し，Sphero SPRK+を前後左右に動かすことで，ユーザの体重移動に追従するように動作する．
+% 評価アプリケーションの実装として，mROS 2-POSIXとROS 2の両方で同じ機能を持つノードを作成する必要がある．
 ROS 2のアプリケーションは，Wii Fit Boardの値を取得するOSSをROS 2ノード化したものと，Sphero SPRK+を動作させることができるライブラリを提供しているOSSをROS 2ノード化して通信させている．
 mROS 2-POSIXのアプリケーションの実装はROS 2のアプリケーションの機能と同じものを実装する必要があるため，同様のものを作成する．
 ROS 2で動作するノードのソースコードはそのまま移植することはできないため，ROS 2のrclcppではなくmROS 2-POSIX固有のAPIを使用して作成する必要がある．
@@ -137,20 +137,20 @@ Sphero SPRK+のノードの移植は，ライブラリがPythonで書かれて�
 	柿本翔大，松原克弥:クラウド連携を対象としたアーキテクチャ中立なROSランタイムの実現，情報処理学会研究報告， Vol. 2023-EMB-62，No. 51 ，pp. 1-7(2023)．
 	\bibitem{mROS 2-POSIX hyoukajikken}
 	高瀬英希，田中晴亮，細合晋太郎: ロボットソフトウェア軽量実行環境mROS 2のPOSIX対応に向けた実装および評価，日本ロボット学会誌，Vol. 2023-EMB-41，No. 8，pp. 724-727(2023)．
-	\bibitem{mROS 2}
-	mROS 2：\url{https://github.com/mROS-base/mros2}
-	\bibitem{POSIX}
-	IBM POSIX：\url{https://www.ibm.com/docs/ja/zos/2.3.0?topic=ulero-posix}
+	% \bibitem{mROS 2}
+	% mROS 2：\url{https://github.com/mROS-base/mros2}
+	% \bibitem{POSIX}
+	% IBM POSIX：\url{https://www.ibm.com/docs/ja/zos/2.3.0?topic=ulero-posix}
 	\bibitem{embeddedRTPS}
 	A． Kampmann， et al.: “A Portable Implementation of the Real-Time Publish-Subscribe Protocol for Microcontrollers in Dis-tributed Robotic Applications，” Proc. of ITSC， pp.443–448，2019．
 	% \bibitem{lwIP}
 	% lwIP Wiki:\url{https://lwip.fandom.com/wiki/LwIP_Wiki}
 	% \bibitem{CMSIS-RTOS}
 	% CMSIS-RTOS：\url{https://www.keil.com/pack/doc/CMSIS/RTOS/html/index.html}
-	\bibitem{Sphero SPRK+}
-	Sphero SPRK+：\url{https://sphero-edu.jp/teaching/sprk/}
-	\bibitem{Wii Fit Board}
-	Wii Fit Board：\url{https://www.nintendo.co.jp/wii/rfpj/board/index.html}
+	% \bibitem{Sphero SPRK+}
+	% Sphero SPRK+：\url{https://sphero-edu.jp/teaching/sprk/}
+	% \bibitem{Wii Fit Board}
+	% Wii Fit Board：\url{https://www.nintendo.co.jp/wii/rfpj/board/index.html}
 \end{thebibliography}
 \end{document}
 %
