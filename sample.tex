@@ -53,6 +53,7 @@ mROS 2は，ROS 2ノードの軽量実行環境である．
 mROS 2は，中規模の組込みデバイス上で事項されるプログラムに汎用デバイス上のROS 2ノードと自律的に通信する機能を提供している．
 このソフトウェア基盤によって，分散型のロボットシステムへの組込み技術の導入できる．
 組込みデバイスは計算資源が限定的であるが，リアルタイム性の向上および消費電力が削減をできる．
+そして，mROS 2がPOSIX[7]に対応したのがmROS 2-POSIXである．
 \\　図1（a）は，mROS 2-POSIXのソフトウェア構成を示す．mROS 2-POSIXアプリケーション層は，ユーザが実装するROS 2ノードに相当する．
 \begin{figure}[t]
 	\centering
@@ -73,10 +74,10 @@ mROS 2-POSIX API層および通信ライブラリ層は，ROS 2のtopicに相当
 本階層は，ROS 2のネイティブなクライアント通信ライブラリであるrclcppと互換性を保つように設計している．
 mROS 2通信ライブラリでは，rclcppのうちpub/sub通信の基本的な機能のみ実装されている．
 利用可能な機能は制限されているものの，組込み技術を導入するROS 2開発者は，汎用OS向けのプログラミングスタイルを踏襲しながらC++によってmROS 2のアプリケーションを実装できる．
-\\　Real Time Publish-Subscribe（以下，RTPS）プロトコルスタックにはUDPでパブリッシャとサブスクライバC++実装のembeddedRTPS[7]が採用されている．
-メモリ領域の静的確保など組込みデバイスでの稼働を想定して設計されており，RTPSにおけるSPDP（Simple Participant Discover Protocol）およびSEDP（Simple Endpoint Discover Protocol）が実装されているため，通信の自立性が実現できる．
+\\　Real Time Publish-Subscribe（以下，RTPS）プロトコルスタックにはUDPでパブリッシャとサブスクライバC++実装のembeddedRTPS[8]が採用されている．
+また，RTPSにおけるSPDPおよびSEDPが実装されているため，通信の自立性が実現できる．
 UDPについては組込み向けのC実装であるlwIPが採用されている．
-また，これらの階層はCMSIS-POSIX(Cortex Microcontroller System Interface Standard Portable Operating System Interface) APIに依存している．
+また，これらの階層はCMSIS-POSIX APIに依存している．
 通信層のembeddedRTPSおよびlwIPはCMSAIS-POSIXに依存しており，図1（b）に示すmROS 2のCMSIS-RTOSを互換した層になっている．
 最下層にはハードウェアを抽象化したライブラリがある．
 \\　mROS 2-POSIXの実行方式は，mROS 2が対応しているリアルタイムOSとの相違がある．
@@ -84,7 +85,7 @@ UDPについては組込み向けのC実装であるlwIPが採用されている
 POSIXにおいてはタスクに相当する概念はプロセスであり，そこから生成されるスレッドを実行単位として処理が進行している．
 \\　したがって，mROS2-POSIXは図2に示す実行方式を採用している．
 \begin{figure}[t]
-	\includegraphics[width=0.9\linewidth]{./src/fig2_execution_structure.png}
+	\includegraphics[width=0.7\linewidth]{./src/fig2_execution_structure.png}
 	\caption{mROS 2-POSIXの実行方式}
   \label{fig:arch}
 \end{figure}
@@ -94,7 +95,7 @@ mROS 2-POSIXの実行単位であるノードはPOSIXのスレッドに対応付
 メッセージキューおよびミューテックスによるスレッドの同期・通信および排他制御は，POSIXではPthreadによって対応している．
 メモリ管理機能はAlloc/Freeで，時間管理はOS時刻管理機能で対応している．
 lwIPにおけるUDPパケット処理は，POSIXにおけるOS資源の操作に関する機能で実現されている．
-\\　先行研究である菅ら[]と柿本ら[]は動的配置機構を実装する環境の想定として，クラウドのCPUアーキテクチャはx64 PC，組込みデバイスはarm64 RPi4上のUbuntuで動作することを想定している．
+\\　先行研究である菅ら[4]と柿本ら[5]は動的配置機構を実装する環境の想定として，クラウドのCPUアーキテクチャはx64 PC，組込みデバイスはarm64 RPi4上のUbuntuで動作することを想定している．
 mROS 2-POSIXはmROS 2とは違い，POSIXに準拠したUbuntuを動作させることができる．
 本研究では，mROS 2-POSIXとROS 2を比較評価し，その性能が動的配置機構の実現に向けたソフトウェア基盤として適切であるか評価する． 
 
@@ -106,7 +107,7 @@ mROS 2は，ROS2に同様のアプリケーションを実装した場合でも�
 図３にアプリケーションの構造を示す．
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.8\linewidth]{./src/fig3_application_structure.png}
+	\includegraphics[width=0.75\linewidth]{./src/fig3_application_structure.png}
 	\caption{実装するアプリケーション}
   \label{fig:arch}
 \end{figure}
@@ -136,9 +137,9 @@ Sphero SPRK+のノードの移植は，ライブラリがPythonで書かれて�
 
 \section{結言}
 本研究では，クラウドとロボット間での実行状態を含む稼働中ノードの動的マイグレーションの実現に向けたmROS 2-Posixの評価を行い，mROS 2がROS 2と比べて動的配置機構の実現のソフトウェア基盤としてどの点で優位性があるのか明らかにすることを目指す．
-\\　動的配置機構の手法をROS 2環境で実現した菅ら[]はオーバーヘッドの増加が課題であるとしている．
-柿本ら[]は，mROS 2-POSIXを用いたアプローチを提案している．
-しかし，mROS 2-POSIXを評価している研究[]ではROS 2とmROS 2-POSIXの通信性能とメモリサイズを評価しているが，ごく小規模なアプリケーションで評価を行っている．
+\\　動的配置機構の手法をROS 2環境で実現した菅ら[4]はオーバーヘッドの増加が課題であるとしている．
+柿本ら[5]は，mROS 2-POSIXを用いたアプローチを提案している．
+しかし，mROS 2-POSIXを評価している研究[6]ではROS 2とmROS 2-POSIXの通信性能とメモリサイズを評価しているが，ごく小規模なアプリケーションで評価を行っている．
 そのため，本研究では，mROS 2-POSIXを用いてROS 2の性能を評価．通信性能やメモリサイズを基に，動的配置機構の可能性を検証する．
 \section{知能システムコースにおける本研究の位置づけ}
 本研究は，ROS 2の組込み向けデバイスでの実行環境であるmROS 2-POSIXの評価を行うことで，クラウドとロボット間での実行状態を含む稼働中ノードの動的マイグレーションの実現に向けたソフトウェア基盤としての優位性を明らかにすることを目指している．
@@ -161,8 +162,8 @@ Sphero SPRK+のノードの移植は，ライブラリがPythonで書かれて�
 	高瀬英希，田中晴亮，細合晋太郎: ロボットソフトウェア軽量実行環境mROS 2のPOSIX対応に向けた実装および評価，日本ロボット学会誌，Vol. 2023-EMB-41，No. 8，pp. 724-727(2023)．
 	% \bibitem{mROS 2}
 	% mROS 2：\url{https://github.com/mROS-base/mros2}
-	% \bibitem{POSIX}
-	% IBM POSIX：\url{https://www.ibm.com/docs/ja/zos/2.3.0?topic=ulero-posix}
+	 \bibitem{POSIX}
+	 POSIX：\url{https://www.ibm.com/docs/ja/zos/2.3.0?topic=ulero-posix}
 	\bibitem{embeddedRTPS}
 	A． Kampmann， et al.: “A Portable Implementation of the Real-Time Publish-Subscribe Protocol for Microcontrollers in Dis-tributed Robotic Applications，” Proc. of ITSC， pp.443–448，2019．
 	% \bibitem{lwIP}
