@@ -15,8 +15,8 @@
 }
 \course{Intelligent Systems Course}
 
-\title{クラウド-ロボット間でROSノードが移行できるアーキテクチャ中立なROSランタイムの実現に向けたmROS2-POSIXの評価}
-\etitle{}
+\title{シームレスなクラウド連携の実現に向けた軽量ロボットソフトウェア基盤mROS 2-POSIXの予備評価}
+\etitle{A Preliminary Evaluation of the Lightweight Robot Software Framework mROS 2-POSIX Toward Seamless Cloud Collaboration}
 \eauthor{Aoi Nakamura}
 \abstract{
 ロボットソフトウェア開発において、ROSの利用が増加している．
@@ -60,11 +60,11 @@ mROS 2は，中規模の組込みデバイス上で事項されるプログラ�
 	\begin{minipage}{.5\textwidth}
 		\centering
 		\subfloat[mROS 2-POSIXの内部構成]{
-			\includegraphics[width=0.45\textwidth]{./src/fig1_mros2posix_a.png}\label{fig:subfig_a}
+			\includegraphics[width=0.35\textwidth]{./src/fig1_mros2posix_a.png}\label{fig:subfig_a}
 		}
 		\hfill
 		\subfloat[mROS 2の内部構成]{
-			\includegraphics[width=0.45\textwidth]{./src/fig1_mros2_b.png}\label{fig:subfig_b}
+			\includegraphics[width=0.35\textwidth]{./src/fig1_mros2_b.png}\label{fig:subfig_b}
 		}
 	\end{minipage}
 	\caption{mROS 2-POSIXとmROS 2のソフトウェア構成}
@@ -85,7 +85,7 @@ UDPについては組込み向けのC実装であるlwIPが採用されている
 POSIXにおいてはタスクに相当する概念はプロセスであり，そこから生成されるスレッドを実行単位として処理が進行している．
 \\　したがって，mROS2-POSIXは図2に示す実行方式を採用している．
 \begin{figure}[t]
-	\includegraphics[width=0.7\linewidth]{./src/fig2_execution_structure.png}
+	\includegraphics[width=0.6\linewidth]{./src/fig2_execution_structure.png}
 	\caption{mROS 2-POSIXの実行方式}
   \label{fig:arch}
 \end{figure}
@@ -107,7 +107,7 @@ mROS 2は，ROS2に同様のアプリケーションを実装した場合でも�
 図３にアプリケーションの構造を示す．
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.75\linewidth]{./src/fig3_application_structure.png}
+	\includegraphics[width=0.65\linewidth]{./src/fig3_application_structure.png}
 	\caption{実装するアプリケーション}
   \label{fig:arch}
 \end{figure}
