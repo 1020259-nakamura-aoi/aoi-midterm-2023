@@ -8,7 +8,6 @@
 \usepackage{funinfosys}
 \usepackage{url}
 \usepackage[dvipdfmx]{graphicx}
-\usepackage{url}
 
 \author{% 
 1020259 中村碧\\指導教員 : 松原克弥
@@ -23,11 +22,13 @@
 クラウド連携を用いた分散ロボットシステムの構築が主流だが，ノード配置の柔軟性が課題となっている．
 特に，クラウドとロボットのCPUアーキテクチャの違いから，動的なノード再配置が難しい．
 先行研究での動的配置機構はオーバーヘッドの増加が問題とされ，mROS 2-POSIXを用いたアプローチも提案されているが，評価は異なるメッセージ型を送受信するアプリケーションに限定されている．
-\\本研究では，mROS 2-POSIXを用いてROS 2の性能を評価．通信性能やメモリサイズを基に，動的配置機構の軽量ソフトウェア基盤としてmROS 2-POSIXの評価を行う．
+\\　本研究では，mROS 2-POSIXとROS 2の性能を比較評価する．
+実験結果によって得た通信性能やメモリサイズを基に，mROS 2-POSIXが複雑なアプリケーション上でも期待される性能を発揮できることを示す．
 }
 \keywords{ロボティクス,mROS2-POSIX}
-\eabstract{In robot software development, the use of ROS is on the rise. While building distributed robot systems through cloud integration is popular, the flexibility in node placement remains a challenge. Specifically, the disparity in CPU architectures between the cloud and robots complicates dynamic node reallocation. Previous studies on dynamic placement mechanisms have reported increased overhead, and although approaches using mROS 2-POSIX have been proposed, evaluations have been limited to small-scale applications.
-\\ In this research, we evaluate the performance of ROS 2 using mROS 2-POSIX. Based on communication performance and memory size, we explore the potential of dynamic placement mechanisms.}
+\eabstract{
+The use of ROS in robot software development is on the rise. While cloud-integrated distributed robot systems are becoming the norm, there are challenges in the flexibility of node placement. Specifically, the dynamic relocation of nodes is complicated due to differences in CPU architectures between the cloud and robots. Previous research has highlighted the increase in overhead for dynamic placement mechanisms. Although the mROS 2-POSIX approach has been proposed, its evaluation has been limited to applications that send and receive different message types. 
+\\　In this study, I evaluate the performance of ROS 2 using mROS 2-POSIX, focusing on communication performance and memory size, to assess mROS 2-POSIX as a lightweight software platform for dynamic placement mechanisms.}
 \ekeywords{Roboethics, mROS2-POSIX}
 \begin{document}
 \maketitle
@@ -93,26 +94,31 @@ POSIXにおいてはタスクに相当する概念はプロセスであり，そ
 \\　したがって，mROS2-POSIXは図2に示す実行方式を採用している．
 \begin{figure}[t]
 	\centering
-	\includegraphics[width=0.9\linewidth]{./src/fig2_execution_structure.png}
+	\includegraphics[width=0.6\linewidth]{./src/fig2_execution_structure.png}
 	\caption{mROS 2-POSIXの実行方式}
   \label{fig:arch}
 \end{figure}
 mROS 2-POSIXの実行単位であるノードはPOSIXのスレッドに対応付けらており，mROS 2の通信ライブラリ機能を担う実行資源はPOSIXのプロセスとして捉え，これを管理対象としている．
 組込みマイコンでの通信処理におけるイベント割込みについては，POSIX準拠OSにおけるブロッキングAPIの発行に相当させて処理されている．
-\\　mROS 2とmROS 2-POSIXの機能構造の対応として，タスク管理機能は，スレッドの生成や開始などのPOSIX資源の管理機能に対応付けれている．
-メッセージキューおよびミューテックスによるスレッドの同期・通信および排他制御は，POSIXではPthreadによって対応している．
-メモリ管理機能はAlloc/Freeで，時間管理はOS時刻管理機能で対応している．
-lwIPにおけるUDPパケット処理は，POSIXにおけるOS資源の操作に関する機能で実現されている．
+% \\　mROS 2とmROS 2-POSIXの機能構造の対応として，タスク管理機能は，スレッドの生成や開始などのPOSIX資源の管理機能に対応付けれている．
+% メッセージキューおよびミューテックスによるスレッドの同期・通信および排他制御は，POSIXではPthreadによって対応している．
+% メモリ管理機能はAlloc/Freeで，時間管理はOS時刻管理機能で対応している．
+% lwIPにおけるUDPパケット処理は，POSIXにおけるOS資源の操作に関する機能で実現されている．
 
 \section{評価方針}
 mROS 2-POSIXを評価するにあったって，mROS 2と同様のアプリケーションをROS 2に実装し，比較評価する．
+mROS 2-POSIXは，図3のようなハードウェアを通してロボットを制御するアプリケーションの評価は行われていない．
+したがって，本研究ではハードウェアを利用してユーザーがロボットを制御するアプリケーションを実装し，mROS 2-POSIXの評価を行う．
 評価項目としては，mROS 2-POSIXがROS 2と比べてどの点で優位性があるのかを明らかにするため，以下の項目を設定した．
 \begin{itemize}
 	\item 通信性能の評価
 	\item メモリサイズの評価
 \end{itemize}
-　通信性能の評価については，1回の通信をWii Fit Boardの値をサブスクライブするまでとし，それを100回行い，その平均と最大値と最小値と標準偏差を取ることで性能比較を行う．
-\\メモリサイズの評価については，アプリケーションのバイナリをsizeコマンドで計測しそれぞれプログラムの実行可能コードを格納するtext，初期化済みのグローバル変数と性的変数を格納するdata，初期化されていないグローバル変数と性的変数を格納するbssの3分類を比較する．
+　通信性能の評価は，ROS 2の基本的な通信機能であるrclcppと2章でふれたmROS 2-POSIXの通信機能の差異を明確にするために行う．
+具体的には，1回の通信をTopicからサブスクライブするまでに要するラウンドトリップタイム（RTT）を計測する．
+それを100回行い，その平均と最大値と最小値と標準偏差を取ることで性能比較を行う．
+\\メモリサイズの評価は，mROS 2-POSIXの機能構造の対応や，リアルタイム性，消費電力の削減などの特性がメモリ使用量にどのような影響を与えるか検証する．
+アプリケーションのバイナリをsizeコマンドで計測しそれぞれプログラムの実行可能コードを格納するtext，初期化済みのグローバル変数と性的変数を格納するdata，初期化されていないグローバル変数と性的変数を格納するbssの3分類を比較する．
 %%
 %%ハードウェアを通して
 %mros2-posixを評価
@@ -122,24 +128,22 @@ mROS 2-POSIXを評価するにあったって，mROS 2と同様のアプリケ�
 % Wii Fit BoardとSphero SPRK+を用いたロボット制御アプリケーションは，Wii Fit Boardはユーザの体重移動を検知し，Sphero SPRK+を前後左右に動かすことで，ユーザの体重移動に追従するように動作する．
 % 評価アプリケーションの実装として，mROS 2-POSIXとROS 2の両方で同じ機能を持つノードを作成する必要がある．
 評価に使用するアプリケーションはSphero SPRK+とWii Fit Boardを用いたロボット制御アプリケーションである．
-アプリケーションは，Wii Fit Boardはユーザの体重移動を検知し，Sphero SPRK+を前後左右に動かすことで，ユーザの体重移動に追従するように動作する．
 図３にアプリケーションの構造を示す．
+Wii Fit Boardはユーザの体重移動を検知し，Sphero SPRK+を前後左右に動かすことで，ユーザの体重移動に追従するように動作する．
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.7\linewidth]{./src/fig3_application_structure.png}
 	\caption{実装するアプリケーション}
   \label{fig:arch}
 \end{figure}
-mROS 2-POSIXは，図3のようなハードウェアを通してロボットを制御するアプリケーションの評価は行われていない．
-したがって，本研究ではハードウェアを利用してユーザーがロボットを制御するアプリケーションを実装し，mROS 2-POSIXの評価を行う．
 アプリケーションは，Wii Fit Boardに乗っているユーザの座標をパブリッシュするノードであると，Wii Fit BOardの座標があるトピックにサブスクライブし，受け取った値をもとにSphero SPRK+を動作させるノードの2つによって実装されている．
 ROS 2のアプリケーションは，Wii Fit Boardの値を取得するOSSをROS 2ノード化したものと，Sphero SPRK+を動作させることができるライブラリを提供しているOSSをROS 2ノード化して通信させている．
-mROS 2-POSIXのアプリケーションの実装はROS 2のアプリケーションの機能と同じものを実装する必要があるため，同様のものを作成する．
 ROS 2で動作するノードのソースコードはそのまま移植することはできないため，ROS 2のrclcppではなくmROS 2-POSIX固有のAPIを使用して作成する必要がある．
-また，Sphero SPRK+を動作させるライブラリはPythonでコーディングされているため，C++のみに対応しているmROS 2-POSIXではそのまま使用できない．
-C++のライブラリに書き換える必要がある．
+%また，Sphero SPRK+を動作させるライブラリはPythonでコーディングされているため，C++のみに対応しているmROS 2-POSIXではそのまま使用できため，Sphero SPRK+を動作させるライブラリをC++のライブラリに書き換える必要がある．
+
+
 \section{進捗と計画}
-現在の進捗状況として，アプリケーションはROS 2で動作するノードの作成が完了した．
+進捗として，アプリケーションはROS 2で動作するノードの作成が完了した．
 mROS 2-POSIX対応は未実現である．
 mROS 2-POSIXでは，Wii Fit Boardの値をパブリッシュするノードは移植することができた．
 Sphero SPRK+のノードの移植は，ライブラリがPythonで書かれているため，C++に書き換える必要があり，現在書き換えに関する検討（調査）を行っている．
@@ -153,7 +157,7 @@ Sphero SPRK+のノードの移植は，ライブラリがPythonで書かれて�
 また，mROS 2-POSIXが動的配置機構の軽量ランタイムとして，
 
 \section{知能システムコースにおける本研究の位置づけ}
-本研究は，ROS 2の組込み向けデバイスでの実行環境であるmROS 2-POSIXの評価を行うことで，クラウドとロボット間での実行状態を含む稼働中ノードの動的マイグレーションの実現に向けたソフトウェア基盤としての優位性を明らかにすることを目指している．
+本研究は，mROS 2-POSIXの評価を行うことで，実行状態を含む稼働中ノードのライブマイグレーションの実現に向けたロボットソフトウェア基盤としての優位性を明らかにすることを目指す．
 その過程で，mROS 2-POSIXで動作するロボット制御アプリケーションの実装を行い，アプリケーションの動作を評価することで，動的配置機構を実装するソフトウェア基盤として適切であるか評価する．
 そのため，知能システムコースのカリキュラムポリシーに記載のある「実世界への実装に関する具体的な課題に取り組み，その結果の評価を通じて，新しい方法論や学問領域を切り拓く能力を育む」に該当する．
 
