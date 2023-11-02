@@ -14,7 +14,7 @@
 }
 \course{Intelligent Systems Course}
 
-\title{シームレスなクラウド連携の実現に向けた軽量ロボットソフトウェア基盤mROS 2-POSIXの予備評価}
+\title{シームレスなクラウド連携の実現に向けた\\軽量ロボットソフトウェア基盤mROS 2-POSIXの予備評価}
 \etitle{A Preliminary Evaluation of the Lightweight Robot Software Framework mROS 2-POSIX Toward Seamless Cloud Collaboration}
 \eauthor{Aoi Nakamura}
 \abstract{
@@ -22,14 +22,14 @@
 クラウド連携を用いた分散ロボットシステムの構築が主流だが，ノード配置の柔軟性が課題となっている．
 特に，クラウドとロボットのCPUアーキテクチャの違いから，動的なノード再配置が難しい．
 先行研究での動的配置機構はオーバーヘッドの増加が問題とされ，mROS 2-POSIXを用いたアプローチも提案されているが，性能評価はint型などのメッセージ型を送受信するアプリケーション上だけで実験されている．
-\\　本研究では，mROS 2-POSIXとROS 2の性能を比較評価する．
+本研究では，mROS 2-POSIXとROS 2の性能を比較評価する．
 実験結果によって得た通信性能やメモリサイズを基に，mROS 2-POSIXが複雑なアプリケーション上でも期待される性能を発揮できることを示す．
 }
-\keywords{ロボティクス,mROS2-POSIX}
+\keywords{クラウドロボティクス,Robot Operating System,WebAssembly}
 \eabstract{
 The use of ROS in robot software development is on the rise. While cloud-integrated distributed robot systems are becoming the norm, there are challenges in the flexibility of node placement. Specifically, the dynamic relocation of nodes is complicated due to differences in CPU architectures between the cloud and robots. Previous research has highlighted the increase in overhead for dynamic placement mechanisms. Although the mROS 2-POSIX approach has been proposed, its evaluation has been limited to applications that send and receive different message types. 
 \\　In this study, I evaluate the performance of ROS 2 using mROS 2-POSIX, focusing on communication performance and memory size, to assess mROS 2-POSIX as a lightweight software platform for dynamic placement mechanisms.}
-\ekeywords{Roboethics, mROS2-POSIX}
+\ekeywords{Cloud Robotics, Robot Operating System, WebAssembly}
 \begin{document}
 \maketitle
 %\vspace*{-.5cm}
@@ -144,7 +144,7 @@ mROS 2-POSIXでは，Wii Fit Boardの値をパブリッシュするノードは�
 Sphero SPRK+のノードの移植は，ライブラリがPythonで書かれているため，C++に書き換える必要があり，現在書き換えに関する検討（調査）を行っている．
 %1対
 \section{結言}
-本研究では，クラウドとロボット間での実行状態を含む稼働中ノードのライブマイグレーションの実現に向けたmROS 2-Posixの評価を行い，mROS 2がROS 2と比べて動的配置機構の実現のソフトウェア基盤としてどの点で優位性があるのか明らかにすることを目指す．
+本研究では，クラウドとロボット間での実行状態を含む稼働中ノードのライブマイグレーションの実現に向けたmROS 2-POSIXの評価を行い，mROS 2がROS 2と比べて動的配置機構の実現のソフトウェア基盤としてどの点で優位性があるのか明らかにすることを目指す．
 動的配置機構をROS 2環境で実現した手法は，ライブマイグレーション後のファイルサイズのオーバーヘッド増加が課題であるとしている．
 課題解決のアプローチとして，ROS 2の軽量ランタイムであるmROS 2-POSIXを採用し，ライブマイグレーション後のオーバーヘッド全体を低減する試みを提案している．
 しかし，ROS 2とmROS 2-POSIXの比較評価では，小規模なアプリケーションでしか評価が行われておらず，実際に利用されるようなアプリケーション上での評価は行われていない．
